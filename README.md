@@ -1,5 +1,6 @@
 # MLB Pitch Locator
-<h4>Interactive plot showing MLB pitch locations from Statcast using Pandas and SQLite.
+<h4>Interactive plot showing MLB pitch locations from Statcast using Pandas and SQLite, saving as HTML for in-browser viewing through plotly.
+
 
 Supports both importing local Statcast .csv file and pulling data directly from Statcast using baseball_scraper.
 
