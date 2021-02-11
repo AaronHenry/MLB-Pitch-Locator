@@ -7,7 +7,6 @@ Created on Mon Feb  1 14:30:41 2021
 """
 
 
-import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine # database connection
 
@@ -76,12 +75,16 @@ fig3.write_html("LR JacobDegrom2020.html")
 fig3.show()
 
 #------------------------------------------------------------
-
+#TODO: add user input functions
 #using statcast directly --- YU DARVISH 2020 EXAMPLE
 
-playerid_lookup('darvish', 'yu')
+fname = 'Yu'
+lname = 'Darvish'
+season = 2020
 
-darvish_stats = statcast_pitcher("2020-1-1", "2021-1-1", 506433)
+playerid = pd.DataFrame(playerid_lookup(lname, fname)).iloc[0]['key_mlbam']
+
+darvish_stats = statcast_pitcher("2020-1-1", "2021-1-1", playerid)
 
 #pitch location scatter plot
 fig4 = go.Figure()
